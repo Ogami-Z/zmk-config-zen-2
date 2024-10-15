@@ -3,16 +3,3 @@ on: [push, pull_request, workflow_dispatch]
 jobs:
   build:
     uses: LOWPROKB/zmk/.github/workflows/build-user-config.yml@corne-ish-zen-v2
-    steps:
-      - uses: actions/checkout@v3
-
-      # Set up Python 3.x
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.x'
-
-      # Create a virtual environment and install remarshal
-      - run: |
-          python3 -m venv .venv
-          source .venv/bin/activate
-          pip install remarshal
