@@ -2,12 +2,11 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    uses: LOWPROKB/zmk/.github/workflows/build-user-config.yml@corne-ish-zen-v2
 
+  setup-python:
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/setup-python@v5
       with:
         python-version: '3.x'
-
-    - name: Use the ZMK build workflow
-      uses: LOWPROKB/zmk/.github/workflows/build-user-config.yml@corne-ish-zen-v2
