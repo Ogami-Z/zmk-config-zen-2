@@ -2,16 +2,11 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    uses: LOWPROKB/zmk/.github/workflows/build-user-config.yml@corne-ish-zen-v2
 
-    steps:
-      - uses: actions/checkout@v2
-
-      # Setup Python 3.x
-      - uses: actions/setup-python@v5
+    # Add Python setup here, but outside of the reusable workflow
+    pre-steps:
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
           python-version: '3.x'
-
-      # Use the existing build workflow
-      - name: Run user-config build
-        uses: LOWPROKB/zmk/.github/workflows/build-user-config.yml@corne-ish-zen-v2
