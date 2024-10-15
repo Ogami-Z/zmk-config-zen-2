@@ -2,11 +2,22 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    uses: LOWPROKB/zmk/.github/workflows/build-user-config.yml@corne-ish-zen-v2
-
-  setup-python:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
-    - uses: actions/setup-python@v5
-      with:
-        python-version: '3.x'
+      - uses: actions/checkout@v3
+
+      # Set up Python 3.x
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      # Create a virtual environment
+      - run: python3 -m venv .venv
+
+      # Activate the virtual environment and install remarshal
+      - run: |
+          source .venv/bin/activate
+          pip install remarshal
+
+      # Use your existing reusable workflow
+      - uses: LOWPROKB/zmk/.github/workflows/build-user-config.yml@corne-ish-zen-v2
