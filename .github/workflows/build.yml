@@ -2,8 +2,8 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    steps:
+    uses: LOWPROKB/zmk/.github/workflows/build-user-config.yml@corne-ish-zen-v2
+    pre-steps:
       - uses: actions/checkout@v3
 
       # Set up Python 3.x
@@ -11,13 +11,8 @@ jobs:
         with:
           python-version: '3.x'
 
-      # Create a virtual environment
-      - run: python3 -m venv .venv
-
-      # Activate the virtual environment and install remarshal
+      # Create a virtual environment and install remarshal
       - run: |
+          python3 -m venv .venv
           source .venv/bin/activate
           pip install remarshal
-
-      # Use your existing reusable workflow
-      - uses: LOWPROKB/zmk/.github/workflows/build-user-config.yml@corne-ish-zen-v2
