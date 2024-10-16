@@ -1,20 +1,19 @@
 on: [push, pull_request, workflow_dispatch]
 
 jobs:
-  setup-python:
+  build:
     runs-on: ubuntu-22.04
     steps:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.x'
-          
-      - run: |
+
+      - name: Install remarshal
+        run: |
           python3 -m venv venv
           source venv/bin/activate
           pip install remarshal
 
-  build:
-    runs-on: ubuntu-22.04
-    needs: setup-python # Ensure this runs after Python setup
-    uses: LOWPROKB/zmk/.github/workflows/build-user-config.yml@corne-ish-zen-v2
+      - name: Build firmware
+        uses: LOWPROKB/zmk/.github/workflows/build-user-config.yml@corne-ish-zen-v2
