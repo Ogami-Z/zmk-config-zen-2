@@ -15,5 +15,5 @@ jobs:
           source venv/bin/activate
           pip install remarshal
 
-      - name: Build firmware
+      - name: Run build workflow
         uses: LOWPROKB/zmk/.github/workflows/build-user-config.yml@corne-ish-zen-v2
