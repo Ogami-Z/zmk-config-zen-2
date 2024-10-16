@@ -2,7 +2,8 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    uses: LOWPROKB/zmk/.github/workflows/build-user-config.yml@corne-ish-zen-v2
+  runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
 
@@ -16,6 +17,3 @@ jobs:
           python3 -m venv venv
           source venv/bin/activate
           pip install remarshal
-
-      # Proceed with build steps
-      - uses: LOWPROKB/zmk/.github/workflows/build-user-config.yml@corne-ish-zen-v2
