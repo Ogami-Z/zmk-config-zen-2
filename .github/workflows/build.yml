@@ -4,18 +4,9 @@ jobs:
   build:
     uses: LOWPROKB/zmk/.github/workflows/build-user-config.yml@corne-ish-zen-v2
 
-  setup-python:   
+  setup-python:
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v3
-
-      # Set up Python version to match your needs
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'  # Ensure it's the version needed by your workflow
-
-      # Install dependencies within a virtual environment
-      - run: |
-          python3 -m venv venv
-          source venv/bin/activate
-          pip install remarshal
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
