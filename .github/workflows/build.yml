@@ -2,12 +2,13 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    runs-on: ubuntu-22.04  # Force Ubuntu 22.04
-    
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v2
+
+      # Setup Python and create a virtual environment
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
           python-version: '3.x'
 
@@ -15,7 +16,5 @@ jobs:
           python3 -m venv venv
           source venv/bin/activate
           pip install remarshal
-      
-      # This reusable workflow section should stay separate
-  build-reusable:
-    uses: LOWPROKB/zmk/.github/workflows/build-user-config.yml@corne-ish-zen-v2
+
+      - uses: LOWPROKB/zmk/.github/workflows/build-user-config.yml@corne-ish-zen-v2
