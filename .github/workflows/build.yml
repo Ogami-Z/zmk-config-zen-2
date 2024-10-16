@@ -3,14 +3,16 @@ on: [push, pull_request, workflow_dispatch]
 jobs:
   build:
     uses: LOWPROKB/zmk/.github/workflows/build-user-config.yml@corne-ish-zen-v2
-  runs-on: ubuntu-latest
+
+  setup-python:   
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
 
       # Set up Python version to match your needs
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.x'  # Ensure it's the version needed by your workflow
+          python-version: '3.12'  # Ensure it's the version needed by your workflow
 
       # Install dependencies within a virtual environment
       - run: |
