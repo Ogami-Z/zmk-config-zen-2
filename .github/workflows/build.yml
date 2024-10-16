@@ -3,10 +3,5 @@ on: [push, pull_request, workflow_dispatch]
 jobs:
   build:
     uses: LOWPROKB/zmk/.github/workflows/build-user-config.yml@corne-ish-zen-v2
-
-  setup-python:
-    runs-on: ubuntu-22.04
-    steps:
-    - uses: actions/setup-python@v5
-      with:
-        python-version: '3.12'
+    with:
+      python-version: '3.12'
