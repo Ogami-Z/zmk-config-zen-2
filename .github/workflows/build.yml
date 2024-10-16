@@ -5,7 +5,7 @@ jobs:
     uses: LOWPROKB/zmk/.github/workflows/build-user-config.yml@corne-ish-zen-v2
 
   setup-python:   
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
 
