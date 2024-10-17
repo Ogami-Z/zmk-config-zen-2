@@ -24,7 +24,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD0";
             #binding-cells = <0>;
-            bindings = <&kp ESC>, <&kp TAB>;
+            bindings = <&kp LEFT_ALT>, <&mo 2>;
         };
 
         ht0: ht0 {
@@ -117,10 +117,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&td0          &kp Q  &kp W  &kp E  &kp R      &kp T    &kp Y  &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&td1          &kp A  &kp S  &kp D  &kp F      &kp G    &kp H  &kp J  &kp K      &kp L    &kp SEMI  &ht0 SQT RETURN
-&kp LEFT_ALT  &kp Z  &kp X  &kp C  &kp V      &kp B    &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_CONTROL
-                            &td3   &kp SPACE  &td2     &mo 1  &mo 2  &mo 3
+&kp TAB  &kp Q  &kp W  &kp E  &kp R      &kp T    &kp Y  &kp U  &kp I      &kp O    &kp P     &kp BSPC
+&td1     &kp A  &kp S  &kp D  &kp F      &kp G    &kp H  &kp J  &kp K      &kp L    &kp SEMI  &ht0 SQT RETURN
+&td0     &kp Z  &kp X  &kp C  &kp V      &kp B    &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
+                       &td3   &kp SPACE  &td2     &mo 1  &mo 2  &mo 3
             >;
         };
 
@@ -151,10 +151,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&trans  &none     &none   &none     &none     &none        &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&trans  &none     &none   &none     &none     &none        &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                          &trans    &trans    &kp SPACE    &kp RET    &trans     &trans
+&trans  &kp EXCL          &kp AT            &kp HASH          &kp DLLR          &kp PRCNT           &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
+&trans  &kp LC(NUMBER_1)  &kp LC(NUMBER_2)  &kp LC(NUMBER_3)  &kp LC(NUMBER_4)  &kp LC(NUMBER_5)    &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
+&trans  &kp LC(NUMBER_6)  &kp LC(NUMBER_7)  &none             &none             &none               &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
+                                            &trans            &trans            &kp SPACE           &kp RET    &trans     &trans
             >;
         };
 
