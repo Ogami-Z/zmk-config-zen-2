@@ -84,14 +84,14 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD2";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT>, <&kp F13>;
+            bindings = <&kp LEFT_SHIFT>, <&kp LS(LA(LC(LGUI)))>;
         };
 
         td3: td3 {
             compatible = "zmk,behavior-tap-dance";
             label = "TD3";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_CONTROL>, <&kp F14>;
+            bindings = <&kp LEFT_CONTROL>, <&kp LS(LC(LEFT_SHIFT))>;
         };
     };
 
