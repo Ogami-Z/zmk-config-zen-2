@@ -37,16 +37,6 @@
             flavor = "tap-preferred";
         };
 
-        ht1: ht1 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HT1";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <180>;
-            flavor = "tap-preferred";
-        };
-
         td1: td1 {
             compatible = "zmk,behavior-tap-dance";
             label = "TD1";
@@ -91,7 +81,14 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD3";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_CONTROL>, <&kp LS(LC(LEFT_SHIFT))>;
+            bindings = <&kp LEFT_CONTROL>, <&kp LA(LC(LEFT_SHIFT))>;
+        };
+
+        td4: td4 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD4";
+            #binding-cells = <0>;
+            bindings = <&kp RETURN>, <&kp APOS>;
         };
     };
 
@@ -118,7 +115,7 @@
 
             bindings = <
 &kp TAB  &kp Q  &kp W  &kp E  &kp R      &kp T    &kp Y  &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&td1     &kp A  &kp S  &kp D  &kp F      &kp G    &kp H  &kp J  &kp K      &kp L    &kp SEMI  &ht0 SQT RETURN
+&td1     &kp A  &kp S  &kp D  &kp F      &kp G    &kp H  &kp J  &kp K      &kp L    &kp SEMI  &td4
 &td0     &kp Z  &kp X  &kp C  &kp V      &kp B    &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
                        &td3   &kp SPACE  &td2     &mo 1  &mo 2  &mo 3
             >;
