@@ -112,6 +112,21 @@
             bindings = <&kp LC(LEFT_ALT)>;
             key-positions = <0 1>;
         };
+
+        browse_back {
+            bindings = <&kp LG(LEFT_BRACKET)>;
+            key-positions = <11 10>;
+        };
+
+        arrow_down {
+            bindings = <&kp DOWN_ARROW>;
+            key-positions = <9 8>;
+        };
+
+        arrow_up {
+            bindings = <&kp UP_ARROW>;
+            key-positions = <7 6>;
+        };
     };
 
     keymap {
