@@ -145,14 +145,186 @@
             key-positions = <11 10>;
         };
 
-        arrow_down {
-            bindings = <&kp DOWN_ARROW>;
-            key-positions = <9 8>;
+        focus_next_win {
+            bindings = <&kp LG(TILDE)>;
+            key-positions = <7 8>;
+            require-prior-idle-ms = <260>;
+            timeout-ms = <30>;
         };
 
-        arrow_up {
-            bindings = <&kp UP_ARROW>;
+        copy {
+            bindings = <&kp LG(C)>;
             key-positions = <7 6>;
+            require-prior-idle-ms = <260>;
+        };
+
+        paste {
+            bindings = <&kp LG(V)>;
+            key-positions = <6 5>;
+            require-prior-idle-ms = <260>;
+        };
+
+        escape {
+            bindings = <&kp ESC>;
+            key-positions = <0 1>;
+            require-prior-idle-ms = <260>;
+        };
+
+        question_mark {
+            bindings = <&kp QUESTION>;
+            key-positions = <28 27>;
+            require-prior-idle-ms = <275>;
+        };
+
+        foward_slash {
+            bindings = <&kp SLASH>;
+            key-positions = <27 26>;
+            require-prior-idle-ms = <275>;
+        };
+
+        move_file {
+            bindings = <&kp LG(LA(V))>;
+            key-positions = <6 5 7>;
+        };
+
+        l_option_l_command {
+            bindings = <&kp LA(LEFT_GUI)>;
+            key-positions = <11 12>;
+        };
+
+        l_control_l_option {
+            bindings = <&kp LC(LEFT_ALT)>;
+            key-positions = <11 10>;
+        };
+
+        l_control_l_gui {
+            bindings = <&kp LC(LEFT_GUI)>;
+            key-positions = <10 12>;
+        };
+
+        l_control_l_shift {
+            bindings = <&kp LC(LEFT_SHIFT)>;
+            key-positions = <10 13>;
+        };
+
+        l_option_l_shift {
+            bindings = <&kp LA(LEFT_SHIFT)>;
+            key-positions = <11 13>;
+        };
+
+        l_command_l_shift {
+            bindings = <&kp LG(LEFT_SHIFT)>;
+            key-positions = <13 12>;
+        };
+
+        l_ctrl_opt_cmnd {
+            bindings = <&kp LC(LA(LEFT_GUI))>;
+            key-positions = <31 20>;
+        };
+
+        l_ctrl_cmnd_shift {
+            bindings = <&kp LC(LG(LEFT_SHIFT))>;
+            key-positions = <10 31>;
+        };
+
+        l_option_cmnd_shift {
+            bindings = <&kp LG(LA(LEFT_SHIFT))>;
+            key-positions = <31 0>;
+        };
+
+        r_option_r_command {
+            bindings = <&kp RA(RIGHT_GUI)>;
+            key-positions = <18 17>;
+        };
+
+        r_control_r_option {
+            bindings = <&kp RC(RIGHT_ALT)>;
+            key-positions = <19 18>;
+        };
+
+        r_control_r_gui {
+            bindings = <&kp RC(RIGHT_GUI)>;
+            key-positions = <19 17>;
+        };
+
+        r_control_r_shift {
+            bindings = <&kp RC(RIGHT_SHIFT)>;
+            key-positions = <19 16>;
+        };
+
+        r_option_r_shift {
+            bindings = <&kp RA(RIGHT_SHIFT)>;
+            key-positions = <18 16>;
+        };
+
+        r_command_r_shift {
+            bindings = <&kp RG(RIGHT_SHIFT)>;
+            key-positions = <17 16>;
+        };
+
+        r_ctrl_option_cmnd {
+            bindings = <&kp RC(RA(RIGHT_GUI))>;
+            key-positions = <32 29>;
+        };
+
+        r_ctrl_cmnd_shift {
+            bindings = <&kp RC(RG(RSHIFT))>;
+            key-positions = <32 19>;
+        };
+
+        r_option_cmnd_shift {
+            bindings = <&kp RA(RG(RSHIFT))>;
+            key-positions = <32 9>;
+        };
+
+        meh {
+            bindings = <&kp RC(RA(RSHIFT))>;
+            key-positions = <32 33>;
+        };
+
+        screenshot {
+            bindings = <&kp LG(LS(NUMBER_3))>;
+            key-positions = <2 3 1>;
+        };
+
+        screenshot_select {
+            bindings = <&kp LG(LS(NUMBER_4))>;
+            key-positions = <4 3 2>;
+        };
+
+        undo {
+            bindings = <&kp LG(Z)>;
+            key-positions = <4 3 13 14>;
+        };
+
+        redo {
+            bindings = <&kp LG(LS(Z))>;
+            key-positions = <5 6 15 16>;
+        };
+
+        left {
+            bindings = <&kp LEFT>;
+            key-positions = <26 16>;
+        };
+
+        down {
+            bindings = <&kp DOWN>;
+            key-positions = <27 17>;
+        };
+
+        up {
+            bindings = <&kp UP>;
+            key-positions = <28 18>;
+        };
+
+        right {
+            bindings = <&kp RIGHT>;
+            key-positions = <29 19>;
+        };
+
+        force_quit {
+            bindings = <&kp LG(LA(ESC))>;
+            key-positions = <3 4 5>;
         };
     };
 
